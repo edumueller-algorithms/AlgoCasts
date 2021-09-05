@@ -14,6 +14,15 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+  let str = '';
+  for (let i = 0; i < n; i++) {
+    str += '#';
+    var padded = str.padEnd(n, ' ');
+    var slice = padded.slice(1);
+    var reversed = padded.slice(1).split('').reverse().join('');
+    console.log(reversed + str[0] + slice);
+  }
+}
 
 module.exports = pyramid;
