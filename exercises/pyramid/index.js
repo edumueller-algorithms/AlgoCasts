@@ -18,10 +18,10 @@ function pyramid(n) {
   let str = '';
   for (let i = 0; i < n; i++) {
     str += '#';
-    var padded = str.padEnd(n, ' ');
-    var slice = padded.slice(1);
-    var reversed = padded.slice(1).split('').reverse().join('');
-    console.log(reversed + str[0] + slice);
+    var rPadded = str.padEnd(n, ' ');
+    var right = rPadded.slice(1);
+    var left = rPadded.slice(1).split('').reverse().join('');
+    console.log(left + str[0] + right);
   }
 }
 
