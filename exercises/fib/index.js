@@ -9,14 +9,20 @@
 //   fib(4) === 3
 
 function fib(n) {
-  let arr = [1, 1];
-  for (let i = 1; i <= n; i++) {
-    arr.push(arr[i] + arr[i - 1]);
-  }
-  return arr[n - 1];
+  if (n < 2) return n;
+  return fib(n - 1) + fib(n - 2);
 }
 
-// * RECURSIVE FUNC:
+// * LOOP SOLUTION (BEST):
+// function fib(n) {
+//   let arr = [1, 1];
+//   for (let i = 1; i <= n; i++) {
+//     arr.push(arr[i] + arr[i - 1]);
+//   }
+//   return arr[n - 1];
+// }
+
+// * RECURSIVE SOLUTION (NOT BEST):
 // function fib(n) {
 //   if (n <= 2) return 1;
 //   let prev = 1;
