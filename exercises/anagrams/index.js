@@ -11,8 +11,8 @@
 function anagrams(stringA, stringB) {
   const hA = {};
   const hB = {};
-  stringA = stringA.toLowerCase().replace(/ /gi, '');
-  stringB = stringB.toLowerCase().replace(/ /gi, '');
+  stringA = stringA.replace(/[^\w]/g, '').toLowerCase();
+  stringB = stringB.replace(/[^\w]/g, '').toLowerCase();
 
   for (let v of stringA) {
     hA[v] = hA[v] + 1 || 1;
